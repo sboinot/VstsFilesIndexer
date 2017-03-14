@@ -47,7 +47,7 @@ namespace VstsIndexer.UnitTests
             var workitems = vstsService.GetWorkItemsByQuery(query);
 
             //Then
-            Assert.AreEqual(2, workitems.workItemRelations.Count);
+            Assert.AreEqual(41, workitems.workItemRelations.Count);
         }
 
         [TestMethod]
@@ -60,7 +60,7 @@ namespace VstsIndexer.UnitTests
             var actualWorkitems = vstsService.GetWorkItemsWithLinksAndAttachments();
 
             //Then
-            Assert.AreEqual(2, actualWorkitems.count);
+            Assert.AreEqual(41, actualWorkitems.count);
             Assert.AreEqual(2, actualWorkitems.value[0].id);
             Assert.AreEqual(1, actualWorkitems.value[0].relations.Count);
             Assert.AreEqual("Sample for REST API VSTS.docx", actualWorkitems.value[0].relations[0].attributes.name);
